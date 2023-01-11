@@ -1,0 +1,297 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #a2a6cd;
+    width: 100%;
+    height: max-content;
+    margin: 0;
+    padding: 1px;
+    color: black;
+    box-sizing: border-box;
+}
+
+.nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #717bdb;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 22px;
+    margin: 0 10px;
+    line-height: 60px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    background-color: rgb(187, 126, 14);
+    transition: 0.5s;
+}
+
+.nav-toggle {
+    color: black;
+    background: none;
+    border: none;
+    font-size: 35px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    background-color: #a2a6cd;
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+    font-size: 60px;
+    box-sizing: border-box;
+}
+
+#imagen {
+    margin: 2px;
+    float: left;
+    height: 245px;
+    width: 245px;
+    padding: 5px;
+    background-color: #a2a6cd;
+    box-sizing: content-box;
+}
+
+h2 {
+    margin: 1px;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    background-color: #a2a6cd;
+    box-sizing: border-box;
+}
+
+h3 {
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #a2a6cd;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+#seccion-derecha {
+    background-color: aliceblue;
+}
+
+#seccion-izquierda {
+    background-color: #d9d9d9;
+}
+
+h4 {
+    margin: 10px;
+    font-weight: bolder;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+
+
+.articulos {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+ul {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.texto {
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.link-contacto{
+    color: rgb(34, 32, 161);
+    text-decoration: none;
+}
+
+.fa-envelope {
+    padding-right: 5px;
+}
+
+.fa-phone {
+    padding-right: 5px;
+}
+
+.fa-location-dot {
+    padding-right: 5px;
+}
+
+.fa-linkedin {
+    padding-right: 5px;
+}
+
+
+@media screen and (max-height: 830px) {
+    main {
+        flex-direction: column-reverse;
+        height: max-content;
+        /* esta especificacion es porque se superponia texto en pantallas Nest Hub */
+    }
+}
+
+@media screen and (max-width: 830px) {
+    main {
+        flex-direction: column-reverse;
+        /* invierto el orden de los divs para que la informacion mas relevante quede arriba */
+        height: max-content;
+    }
+
+    header {
+        height: auto;
+    }
+
+    #imagen {
+        float: none;
+        height: auto;
+        width: auto;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .nav {
+        height: 60px;
+        padding-bottom: 5px;
+    }
+
+    .logo {
+        font-size: 30px;
+        line-height: 60px;
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-top: 0;
+        background-color: #1e2124;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+    }
+    /*lo de arriba es el menu desplegable*/
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link {
+        color: white;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: none;
+        color: #5964cc;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+    /* esta clase la uso en js para deslizar el menu */
+    h1 {
+        padding: 5px;       
+        font-size: 50px;       
+    }
+
+    h2 {       
+        padding: 5px;
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}
+
+/* Colores */
+
+/* rgb(58, 56, 56) */
+/* rgb(121, 112, 112) */
+/* #424549 (gris, discord) #36393e (Gris oscuro, discord) #1e2124 ( color negro, discord)   */
+/* #a2a6cd (violeta claro, header) // #d9d9d9 gris claro div izquierda / abajo */
